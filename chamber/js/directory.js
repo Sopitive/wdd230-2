@@ -1,57 +1,57 @@
-// const requestURL = 'https://vanessabuzzell30.github.io/wdd230/chamber/json/data.json';
-const requestURL = "https://vanessabuzzell30.github.io/wdd230/chamber/json/data.json"
+const requestURL = 'http://127.0.0.1:5500/chamber/json/data.json';
+//const requestURL = "https://vanessabuzzell30.github.io/wdd230/chamber/json/data.json"
 const cards = document.querySelector('div.cards');
 const listButton = document.querySelector("#list-btn");
 const cardButton = document.querySelector("#card-btn");
 
 
 fetch(requestURL)
-    .then(function (response) {
+    .then(function(response) {
         return response.json();
     })
-    .then(function (jsonObject) {
+    .then(function(jsonObject) {
         const businesses = jsonObject['businesses'];
-        // console.table(jsonObject);
+        //console.table(jsonObject);
         businesses.forEach(displayBusinesses);
     });
 
 function displayBusinesses(business) {
-  let card = document.createElement('section');
+    let card = document.createElement('section');
 
-  //img
-  let image = document.createElement('img');
-  image.src = business.imgfile;
-  image.setAttribute('alt', business.name);
-  card.appendChild(image);
+    //img
+    let image = document.createElement('img');
+    image.src = `images/${business.imgfile}`;
+    image.setAttribute('alt', business.name);
+    card.appendChild(image);
 
-  //h2 name
-  let h2 = document.createElement('h2');
-  h2.textContent = business.name;
-  card.appendChild(h2);
+    //h2 name
+    let h2 = document.createElement('h2');
+    h2.textContent = business.name;
+    card.appendChild(h2);
 
-  //p address
-  let p1 = document.createElement('p');
-  p1.textContent = business.address;
-  card.appendChild(p1);
+    //p address
+    let p1 = document.createElement('p');
+    p1.textContent = business.address;
+    card.appendChild(p1);
 
-  //p phone
-  let p2 = document.createElement('p');
-  p2.textContent = business.phone;
-  card.appendChild(p2);
+    //p phone
+    let p2 = document.createElement('p');
+    p2.textContent = business.phone;
+    card.appendChild(p2);
 
-  //p website
-  let p3 = document.createElement('p');
-  p3.textContent = business.website;
-  card.appendChild(p3);
+    //p website
+    let p3 = document.createElement('p');
+    p3.textContent = business.website;
+    card.appendChild(p3);
 
-  cards.appendChild(card);
+    cards.appendChild(card);
 
 }
 
-listButton.addEventListener("click", ()=> {
+listButton.addEventListener("click", () => {
     cards.classList.replace("card-view", "list-view")
 });
 
-cardButton.addEventListener("click", ()=> {
+cardButton.addEventListener("click", () => {
     cards.classList.replace("list-view", "card-view")
 });

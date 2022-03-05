@@ -1,14 +1,11 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@500&display=swap');
-
-
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
 }
 
 #banner {
-    display:none;
+    display: none;
     background-color: #292e1e;
     text-align: center;
     padding: .5rem;
@@ -26,7 +23,9 @@ header {
     grid-column-gap: .8rem;
 }
 
-.logo {width: 10px;}
+.logo {
+    width: 10px;
+}
 
 h1 {
     padding-left: 5px;
@@ -40,9 +39,13 @@ button {
     font-size: 2em;
 }
 
-button:hover {cursor: pointer;}
+button:hover {
+    cursor: pointer;
+}
 
-.extra {display: none;}
+.extra {
+    display: none;
+}
 
 .date {
     grid-row: 2/3;
@@ -51,12 +54,13 @@ button:hover {cursor: pointer;}
 }
 
 nav {
-	margin: 0 auto;
-	max-width: 760px;
+    margin: 0 auto;
+    max-width: 760px;
 }
+
 .navigation {
-	list-style: none;
-	padding: 0;
+    list-style: none;
+    padding: 0;
     margin: 0;
     padding: .5rem;
     position: absolute;
@@ -67,35 +71,48 @@ nav {
     top: 15%;
 }
 
-.navigation li {display: none;}
-
-.navigation a {
-	display: block;
-	padding: 0.75rem 2vw;
-	text-decoration: none;
-	color: white;
-	transition: 0.2s;
+.navigation li {
+    display: none;
 }
 
-nav ul li.active a, .navigation a:hover {background-color: #292e1e;}
+.navigation a {
+    display: block;
+    padding: 0.75rem 2vw;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
 
-.hidden {display: none;}
+nav ul li.active a,
+.navigation a:hover {
+    background-color: #292e1e;
+}
 
-.toggle-btn {padding: 1em;}
+.hidden {
+    display: none;
+}
+
+.toggle-btn {
+    padding: 1em;
+}
 
 .social {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.responsive li {display: block;}
+.responsive li {
+    display: block;
+}
 
 .responsive ul {
     position: absolute;
     width: 100%;
 }
 
-.responsive a {background-color: #292e1e;}
+.responsive a {
+    background-color: #292e1e;
+}
 
 main {
     display: grid;
@@ -106,7 +123,9 @@ main {
     font-size: 1em;
 }
 
-main section {background-color: #7f0799;}
+main section {
+    background-color: #7f0799;
+}
 
 main section h3 {
     color: black;
@@ -117,7 +136,10 @@ main section h3 {
     margin: 0;
 }
 
-main section h4, main section p {font-weight: lighter;}
+main section h4,
+main section p {
+    font-weight: lighter;
+}
 
 main section p a {
     color: white;
@@ -125,7 +147,9 @@ main section p a {
     padding: 0 .25em;
 }
 
-main section p a:hover {color: #afbbf2;}
+main section p a:hover {
+    color: #afbbf2;
+}
 
 .spotlight {
     display: grid;
@@ -142,7 +166,10 @@ main section p a:hover {color: #afbbf2;}
     color: white;
     font-weight: normal;
 }
-#spotlight3 {display: none;}
+
+#spotlight3 {
+    display: none;
+}
 
 .join {
     display: none;
@@ -150,9 +177,13 @@ main section p a:hover {color: #afbbf2;}
     color: white;
 }
 
-.logo {width: 75px;}
+.logo {
+    width: 75px;
+}
 
-.icon {width: 40px;}
+.icon {
+    width: 40px;
+}
 
 .social a img {
     padding: .3em;
@@ -205,10 +236,11 @@ main section p a:hover {color: #afbbf2;}
 .event {
     padding: 0 1em;
     background-color: #9649cb;
-    color:white
+    color: white
 }
 
-.weather, .weather h3 {
+.weather,
+.weather h3 {
     background-color: #292e1e;
     color: white;
     padding: .5em;
@@ -266,11 +298,18 @@ footer {
     color: white;
 }
 
-.contact-info a {color: lightgray;}
+.contact-info a {
+    color: lightgray;
+}
 
-.contact-info a:hover {color: darkgray;}
+.contact-info a:hover {
+    color: darkgray;
+}
 
-.wdd-info {padding: .5rem;}
+.wdd-info {
+    padding: .5rem;
+}
+
 
 /******************
    Discover Page
@@ -285,7 +324,7 @@ footer {
 
 .discover-main h2 {
     color: #7f0799;
-    font-size:xx-large;
+    font-size: xx-large;
     padding-left: 1em;
     margin-bottom: auto;
 }
@@ -312,17 +351,19 @@ footer {
 
 .discover img[data-src] {
     filter: blur(0.2em);
-  }
+}
+
 .discover img {
     filter: blur(0em);
     transition: filter 0.1s;
     /* z-index: -1; */
-  }
+}
 
-.discover-main > p {
+.discover-main>p {
     font-style: italic;
     color: white;
 }
+
 form {
     margin: auto .5rem;
 }
@@ -332,7 +373,7 @@ form {
     padding: 2rem;
     color: white;
     background-color: #7f0799;
-    margin:0;
+    margin: 0;
 }
 
 .description {
@@ -356,7 +397,8 @@ form legend {
     border-radius: 10px;
 }
 
-form label.top, form div {
+form label.top,
+form div {
     display: block;
     padding-top: 1rem;
     padding-right: 1rem;
@@ -364,7 +406,8 @@ form label.top, form div {
     font-size: .8rem;
 }
 
-form label.top input, form label.top select {
+form label.top input,
+form label.top select {
     -webkit-appearance: none;
     display: block;
     font-size: 1rem;
@@ -374,18 +417,18 @@ form label.top input, form label.top select {
     color: #555;
     width: 100%;
     max-width: 20rem;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 form label.sbs {
-    display:block;
+    display: block;
     padding: .75rem 0;
     color: #555;
 }
 
 form textarea {
     width: 88%;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     padding: .2rem;
 }
 
@@ -445,19 +488,25 @@ form label.top input:required {
     float: right;
     max-height: 400px;
 }
+
 .directory {
     text-align: center;
 }
 
-.list-view img, .card-view>section h2 {display: none;}
+.list-view img,
+.card-view>section h2 {
+    display: none;
+}
 
-.card-view img{
+.card-view img {
     display: block;
     width: 70%;
     margin: auto;
 }
 
-.list-view>section h2 {display: block;}
+.list-view>section h2 {
+    display: block;
+}
 
 .list-view section {
     display: grid;
@@ -475,7 +524,7 @@ form label.top input:required {
 }
 
 .list-view-btn button {
-    padding:.2rem;
+    padding: .2rem;
     background-color: white;
     border: 3px #9649cb dotted;
     border-radius: 5px;
